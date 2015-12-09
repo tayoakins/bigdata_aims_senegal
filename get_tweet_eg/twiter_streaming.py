@@ -2,6 +2,7 @@
 from tweepy.streaming import StreamListener
 from tweepy import OAuthHandler
 from tweepy import Stream
+import os
 #import argparse
 import sys
 
@@ -19,7 +20,7 @@ fhandle=open(filename,'w')
 if len(sys.argv) > 2:
     TweetKeyword=[sys.argv[i+2] for i in range(len(sys.argv)-2)]
 else:
-    TweetKeyword=['Africa','big data']
+    TweetKeyword=['Africa','nigeria']
 
 
 print 'TweetKeywords are: ',TweetKeyword
@@ -29,7 +30,7 @@ print 'TweetKeywords are: ',TweetKeyword
 consumer_key = os.environ.get('TWITTER_API_KEY')
 consumer_secret =os.environ.get('TWITTER_API_SECRET')
 access_token = os.environ.get('TWITTER_ACCESS_TOKEN')
-access_token_secret = os.environ.get('TWITTER_ACESS_TOKEN_SECRET')
+access_token_secret = os.environ.get('TWITTER_ACCESS_TOKEN_SECRET')
 
 
 
